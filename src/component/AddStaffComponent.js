@@ -46,7 +46,7 @@ const AddStaffComponent = () => {
 
     useEffect(() => {
 
-        StaffService.getStaffById(staffId).then((response) =>{
+        StaffService.getStaffById(id).then((response) =>{
             console.log(response)
             setStaffId(response.data.staffId)
             setName(response.data.name)
@@ -56,7 +56,7 @@ const AddStaffComponent = () => {
         }).catch(error => {
             console.log(error)
         })
-    },)
+    },[id])
 
     const title = () => {
 

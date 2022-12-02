@@ -20,16 +20,16 @@ class CourseService{
         return axios.post(POST_CRS, Courses)
     }
 
-    getCourseById(CourseId){
-        return axios.get(GET_BYCRSID + '/' + CourseId);
+    getCourseById(courseId){
+        return axios.get(GET_BYCRSID + '/' + courseId);
     }
 
-    updateCourse(CourseId, Course){
-        return axios.put(UPDATE_CRS + '/' + CourseId, Course);
+    updateCourse(courseId, Course){
+        return axios.put(UPDATE_CRS + '/' + courseId, Course);
     }
 
-    deleteCourse(CourseId){
-        return axios.delete(DELETE_CRS + '/' + CourseId);
+    deleteCourse(courseId){
+        return axios.delete(DELETE_CRS + '/' + courseId);
     }
 }
 

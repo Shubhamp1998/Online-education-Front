@@ -64,10 +64,10 @@ const CourseComponent = () => {
                                 <td>
                                 <Link className="btn btn-light btn-sm btn-outline-primary" 
                                         style = {{marginLeft:"4px" ,marginBottom:"2px",padding:"1px"}} 
-                                        to={`/edit-Course/${Course.CourseId}`}>UPDATE</Link>
+                                        to={`/edit-Course/${Course.courseId}`}>UPDATE</Link>
                                                 <br></br>
                                 <button className = "btn btn-light btn-sm btn-outline-danger" 
-                                        onClick = {() => deleteCourse(Course.CourseId)}
+                                        onClick = {() => deleteCourse(Course.courseId)}
                                         style = {{marginLeft:"4px",padding:"3px"}}> DELETE</button>
                                 </td>
                             </tr>

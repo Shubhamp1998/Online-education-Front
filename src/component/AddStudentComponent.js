@@ -53,7 +53,7 @@ const AddStudentComponent = () => {
 
     useEffect(() => {
 
-        StudentService.getStudentById(studentId).then((response) =>{
+        StudentService.getStudentById(id).then((response) =>{
             console.log(response)
             setStudentId(response.data.studentId)
             setUsername(response.data.username)
@@ -65,7 +65,7 @@ const AddStudentComponent = () => {
         }).catch(error => {
             console.log(error)
         })
-    },)
+    },[id])
 
     const title = () => {
 

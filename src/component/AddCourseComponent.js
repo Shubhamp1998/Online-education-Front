@@ -51,17 +51,17 @@ const AddCourseComponent = () => {
 
     useEffect(() => {
 
-        CourseService.getCourseById(courseId).then((response) =>{
+        CourseService.getCourseById(id).then((response) =>{
             console.log(response)
-            setCourseId(response.data.CourseId)
-            setCourseName(response.data.CourseName)
+            setCourseId(response.data.courseId)
+            setCourseName(response.data.courseName)
             setCourseType(response.data.courseType)
             setFees(response.data.fees)
 
         }).catch(error => {
             console.log(error)
         })
-    },)
+    },[id])
 
     const title = () => {
 
